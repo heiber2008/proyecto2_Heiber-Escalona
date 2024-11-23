@@ -17,9 +17,18 @@ let librosColeccion = [
 ];
 
    function informacionLibro (libro){
-        let generos = libros.generos.join(", ");
-        let 
-
+        let generos = libro.generos.join(", ");
+        let disponibilidad = libro.disponible ? "se encuentra disponible" : "no se encuentra disponible ";
+        console.log(`El libro ${libro.nombre}, tiene ${libro.paginas} páginas, fue escrito por ${libro.autor} y es del género ${generos} y ${disponibilidad}.`);
    }
+   
 
-console.log(librosColeccion);
+    function imprimirLibros (libros){
+        for (let i = 0 ; i < libros.legth; i++){
+            informacionLibro(libros[i]);
+        }
+    }
+
+    imprimirLibros(librosColeccion)
+
+console.log("hola");
