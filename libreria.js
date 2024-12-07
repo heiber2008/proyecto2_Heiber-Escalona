@@ -1,34 +1,35 @@
-//hola mundo
-let librosColeccion = [
-    {
-        nombre: "Cien Años de Soledad",
-        paginas: 417,
-        autor: "Gabriel García Márquez",
-        generos: ["Realismo mágico", "Literatura latinoamericana"],
-        disponible: true
-    },
-    {
-        nombre: "1984",
-        paginas: 328,
-        autor: "George Orwell",
-        generos: ["Distopía", "Ciencia ficción"],
-        disponible: false
-    }
+//hola mi gente buena
+// segundo comentario x
+let librosColeccion = [{
+    "nombre": "el principito",
+    "cantidaddePaginas": 100,
+    "autor": "mario",
+    "genero": ["drama", "romance"],
+    "disponible": true
+},
+{
+    "nombre": "señor de los anillos",
+    "cantidaddepaginas": 1304,
+    "autor": "pedro",
+    "genero": ["accion", "drama"],
+    "disponible": true
+}
 ];
 
-   function informacionLibro (libro){
-        let generos = libro.generos.join(", ");
-        let disponibilidad = libro.disponible ? "se encuentra disponible" : "no se encuentra disponible ";
-        console.log(`El libro ${libro.nombre}, tiene ${libro.paginas} páginas, fue escrito por ${libro.autor} y es del género ${generos} y ${disponibilidad}.`);
-   }
-   
+function informacionLibro(libro) {
+    console.log(libro.nombre + " " + libro.cantidaddePaginas + " "
+        + libro.autor + " " + libro.genero + " " + libro.disponible)
+};
 
-    function imprimirLibros (libros){
-        for (let i = 0 ; i < libros.legth; i++){
-            informacionLibro(libros[i]);
-        }
-    }
+function imprimirLibros(libros) {
+    libros.forEach(libro => {
+        informacionLibro(libro);
+    });
+}
 
-    imprimirLibros(librosColeccion)
+function agregarLibro(libros, nuevoLibro) {
+    libros.push(nuevoLibro);
+}
 
-console.log("hola");
+imprimirLibros(librosColeccion);
+
