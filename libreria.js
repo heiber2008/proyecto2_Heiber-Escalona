@@ -2,14 +2,14 @@
 // segundo comentario x
 let librosColeccion = [{
     "nombre": "el principito",
-    "cantidaddePaginas": 100,
+    "cantidadDePaginas": 100,
     "autor": "mario",
     "genero": ["drama", "romance"],
     "disponible": true
 },
 {
     "nombre": "señor de los anillos",
-    "cantidaddepaginas": 1304,
+    "cantidadDePaginas": 1304,
     "autor": "pedro",
     "genero": ["accion", "drama"],
     "disponible": true
@@ -17,8 +17,8 @@ let librosColeccion = [{
 ];
 
 function informacionLibro(libro) {
-    console.log(libro.nombre + " " + libro.cantidaddePaginas + " "
-        + libro.autor + " " + libro.genero + " " + libro.disponible)
+    console.log("nombre: " + libro.nombre + ", paginas:" + libro.cantidadDePaginas + ", autor:"
+        + libro.autor + ", " + libro.genero + ", " + libro.disponible)
 };
 
 function imprimirLibros(libros) {
@@ -28,8 +28,8 @@ function imprimirLibros(libros) {
 }
 
 function agregarLibro(libros, nuevoLibro) {
+
     libros.push(nuevoLibro);
 }
 
 imprimirLibros(librosColeccion);
-
